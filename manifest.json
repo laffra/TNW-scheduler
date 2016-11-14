@@ -1,0 +1,27 @@
+{
+  "name": "TNW Conference Scheduler",
+  "short_name": "TNW Conference Scheduler",
+  "description": "Personalize your TNW Conference Schedule.",
+  "version": "0.4",
+  "permissions": [
+    "activeTab"
+  ],
+  "author": "Chris Laffra - laffra@gmail.com",
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" },
+  "content_scripts" : [
+    {
+      "matches" : [ 
+         "http://thenextweb.com/conference/europe/schedule/"
+      ],
+      "js" : [ "contentscript.js" ],
+      "all_frames" : true
+    }
+  ],
+  "web_accessible_resources": [
+    "tnw_scheduler.js",
+    "tnw_scheduler.css"
+  ],
+  "manifest_version": 2
+}

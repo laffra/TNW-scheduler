@@ -1,0 +1,23 @@
+.checkbox {
+    position: relative;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -o-appearance:none;
+}
+
+.checkbox:after {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: -5px;
+    content: '';
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+    border: 1px solid white;
+}
+
+.checkbox:checked:after {
+    background-color: white;
+}
+
